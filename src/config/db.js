@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 
-const DB_NAME = process.env.DB_NAME || '';
-const DB_USERNAME = process.env.DB_USERNAME || '';
-const DB_PASSWORD = process.env.DB_PASSWORD || '';
-
-const dbURI = `mongodb+srv://${DB_USERNAME}:${DB_PASSWORD}@cluster0.yp3ii.mongodb.net/${DB_NAME}`;
+const dbURI = process.env.DB_URI || '';
 
 mongoose.connect(dbURI);
 
